@@ -14,6 +14,9 @@ app.get('/', (req, res) => {
     res.send('Hello World!')
 })
 
+const budgetRoutes = require('./routes/budgets');
+app.use(budgetRoutes);
+
 app.listen(port, () => {
     console.log(`Listening on port ${port}`)
 })
